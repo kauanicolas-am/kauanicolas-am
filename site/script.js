@@ -178,7 +178,12 @@
     const msg = (data.get('mensagem') || '').toString().trim();
     if (email) lines.push(`E-mail: ${email}`);
     if (msg) lines.push('', msg);
-    window.open(`https://wa.me/5551980817777?text=${encodeURIComponent(lines.join('\n'))}`, '_blank', 'noopener');
+    const url = `https://wa.me/5551980817777?text=${encodeURIComponent(lines.join('\n'))}`;
+    const ready = $('.form-ready', form);
+    ready.href = url;
+    ready.hidden = false;
+    ready.focus();
+    $('.form-note', form).textContent = 'Mensagem pronta. Toque no botão acima para enviar pelo WhatsApp.';
   });
 
   /* ---------- Chuva da tarde ---------- */
