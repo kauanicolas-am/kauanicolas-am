@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tropical Implantes | Clínica Odontológica</title>
+  <meta name="description" content="Clínica odontológica com atendimento personalizado e humanizado: implantes dentários, lentes de contato, clareamento, ortodontia e prevenção com planejamento digital.">
+  <meta name="theme-color" content="#1F2E23">
+  <meta property="og:title" content="Tropical Implantes | Clínica Odontológica">
+  <meta property="og:description" content="Seu sorriso é a nossa maior conquista. Implantes, estética e reabilitação oral com atendimento humanizado.">
+  <meta property="og:image" content="img/fachada.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231F2E23'/%3E%3Cpath d='M14 46c8-4 14-2 18-8s10-8 18-10' stroke='%23C8A55A' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3Cpath d='M24 16c-3 0-5 2.4-5 5.8 0 4.6 2.6 7 3.4 12 .5 2.7 1.2 4.2 2.4 4.2 2 0 1.8-6 7.2-6s5.2 6 7.2 6c1.2 0 1.9-1.5 2.4-4.2.8-5 3.4-7.4 3.4-12C45 18.4 43 16 40 16c-2.6 0-4.2 1.4-8 1.4S26.6 16 24 16z' fill='%23FAF9F6'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <!-- Ícones reutilizáveis -->
+  <svg width="0" height="0" class="sr-only" aria-hidden="true">
+    <defs>
+      <symbol id="i-tooth" viewBox="0 0 24 24"><path d="M7 3C4.8 3 3 4.8 3 7.5c0 2 .8 3.4 1.4 5 .6 1.8.8 4 1.4 6.2.4 1.6 1.1 2.3 1.9 2.3 1.2 0 1.5-1.6 1.9-3.6.3-1.5.8-2.9 2.4-2.9s2.1 1.4 2.4 2.9c.4 2 .7 3.6 1.9 3.6.8 0 1.5-.7 1.9-2.3.6-2.2.8-4.4 1.4-6.2.6-1.6 1.4-3 1.4-5C21 4.8 19.2 3 17 3c-1.8 0-3 1-5 1S8.8 3 7 3z"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-whats" viewBox="0 0 24 24"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.5L3.5 20.5l1.4-4.3A8.5 8.5 0 1 1 20.5 11.6z"/><path d="M9 8.6c.2-.5.5-.5.8-.5h.5c.2 0 .4 0 .5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c-.1.1-.2.3 0 .5.3.6.9 1.3 1.5 1.8.6.5 1.2.8 1.6 1 .2.1.4 0 .5-.1l.6-.7c.2-.2.4-.2.6-.1l1.6.8c.2.1.3.2.3.4 0 .4-.1 1-.6 1.4-.5.4-1.3.7-2.2.5-1-.2-2.4-.8-3.8-2.1-1.6-1.5-2.3-3-2.4-3.8-.1-.8.2-1.6.4-2z" fill="currentColor" stroke="none"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" fill="currentColor" stroke="none"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand" aria-label="Tropical Implantes, início">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="29" class="ring"/><path class="river" d="M10 46c9-4 14-1 19-7s10-9 25-11"/><path class="tooth" d="M24 15c-3 0-5 2.4-5 5.8 0 4.6 2.6 7 3.4 12 .5 2.7 1.2 4.2 2.4 4.2 2 0 1.8-6 7.2-6s5.2 6 7.2 6c1.2 0 1.9-1.5 2.4-4.2.8-5 3.4-7.4 3.4-12C45 17.4 43 15 40 15c-2.6 0-4.2 1.4-8 1.4S26.6 15 24 15z"/></svg>
+        </span>
+        <span class="brand-text">
+          <strong>Tropical Implantes</strong>
+          <small>Clínica Odontológica</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Principal">
+        <a href="#clinica">A clínica</a>
+        <a href="#tratamentos">Tratamentos</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <a href="#contato" class="btn btn-gold btn-sm header-cta">Agendar avaliação</a>
+
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="menu-mobile" hidden>
+    <nav aria-label="Menu móvel">
+      <a href="#clinica">A clínica</a>
+      <a href="#tratamentos">Tratamentos</a>
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a href="#contato" class="btn btn-gold">Agendar avaliação</a>
+  </div>
+
+  <main id="conteudo">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio">
+      <canvas class="hero-waters" aria-hidden="true"></canvas>
+      <div class="hero-mist" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="leaf-shade leaf-shade--hero" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="kicker kicker--light" data-reveal>Clínica odontológica · Implantes e reabilitação oral</p>
+          <h1 class="hero-title" data-split>
+            Seu sorriso é a nossa <em>maior conquista.</em>
+          </h1>
+          <p class="hero-lead" data-reveal style="--d:.5s">
+            Cada tratamento nasce de um planejamento individual, que respeita a sua saúde, o seu tempo e a sua história. Unimos conhecimento, cuidado e tecnologia para devolver harmonia, conforto e função ao seu sorriso.
+          </p>
+          <div class="hero-actions" data-reveal style="--d:.65s">
+            <a href="#contato" class="btn btn-gold btn-lg">
+              Agendar avaliação
+              <svg class="ic"><use href="#i-arrow"/></svg>
+            </a>
+            <a href="#tratamentos" class="btn btn-ghost btn-lg">Ver tratamentos</a>
+          </div>
+          <ul class="hero-chips" data-reveal style="--d:.8s">
+            <li>Atendimento humanizado</li>
+            <li>Planejamento digital</li>
+            <li>Equipe especializada</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="orb">
+            <svg class="orb-text" viewBox="0 0 300 300">
+              <defs><path id="circle-path" d="M150 150m-122 0a122 122 0 1 1 244 0a122 122 0 1 1-244 0"/></defs>
+              <text><textPath href="#circle-path" textLength="752" lengthAdjust="spacing">Tropical Implantes · Clínica Odontológica · Sorria sem pressa ·</textPath></text>
+            </svg>
+            <div class="orb-core">
+              <svg viewBox="0 0 64 64"><path class="river" d="M6 47c10-5 15-1 21-8s11-10 31-12"/><path class="river river--2" d="M6 53c11-4 18-1 24-7s12-8 28-9"/><path class="tooth" d="M24 13c-3 0-5 2.4-5 5.8 0 4.6 2.6 7 3.4 12 .5 2.7 1.2 4.2 2.4 4.2 2 0 1.8-6 7.2-6s5.2 6 7.2 6c1.2 0 1.9-1.5 2.4-4.2.8-5 3.4-7.4 3.4-12C45 15.4 43 13 40 13c-2.6 0-4.2 1.4-8 1.4S26.6 13 24 13z"/></svg>
+            </div>
+          </div>
+          <div class="float-card float-card--a">
+            <strong data-count="2000" data-suffix="+">0</strong>
+            <span>implantes realizados</span>
+          </div>
+          <div class="float-card float-card--b">
+            <strong><span data-count="4.9" data-decimals="1">0</span><svg class="ic-star"><use href="#i-star"/></svg></strong>
+            <span>avaliação média dos pacientes</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#clinica" class="scroll-cue" aria-label="Rolar para a próxima seção"><span></span></a>
+    </section>
+
+    <!-- ============ FAIXA ============ -->
+    <div class="ribbon" aria-hidden="true">
+      <div class="ribbon-track">
+        <span>Atendimento humanizado</span><i></i>
+        <span>Planejamento digital</span><i></i>
+        <span>Equipe especializada</span><i></i>
+        <span>Biossegurança rigorosa</span><i></i>
+        <span>Sem pressa e sem surpresas</span><i></i>
+        <span>Atendimento humanizado</span><i></i>
+        <span>Planejamento digital</span><i></i>
+        <span>Equipe especializada</span><i></i>
+        <span>Biossegurança rigorosa</span><i></i>
+        <span>Sem pressa e sem surpresas</span><i></i>
+      </div>
+    </div>
+
+    <!-- ============ A CLÍNICA ============ -->
+    <section class="section about" id="clinica">
+      <div class="leaf-shade" aria-hidden="true"></div>
+      <div class="container about-grid">
+        <div class="about-media" data-reveal>
+          <figure class="arch">
+            <img src="img/fachada.jpg" alt="Fachada da Clínica Odontológica Tropical & Implantes" loading="lazy" width="783" height="1251">
+          </figure>
+          <div class="about-badge">
+            <span class="about-badge-ring" aria-hidden="true"></span>
+            <p>Sem pressa<br>e sem surpresas</p>
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <p class="kicker" data-reveal>A clínica</p>
+          <h2 class="h2" data-reveal>Odontologia com tempo, escuta e <em>precisão.</em></h2>
+          <p data-reveal>A Tropical Implantes nasceu para tornar o tratamento odontológico uma experiência tranquila. Antes de qualquer procedimento, entendemos o que você sente, o que espera e quais são as suas prioridades.</p>
+          <p data-reveal>Somos uma clínica especializada em implantes e reabilitação oral, com apoio de imagem e planejamento digital. Cada etapa é explicada com clareza, para que você decida com segurança.</p>
+
+          <div class="steps">
+            <div class="step" data-reveal>
+              <span>01</span>
+              <p>Primeira consulta dedicada à avaliação completa, com radiografias, diagnóstico detalhado e tratamento humanizado.</p>
+            </div>
+            <div class="step" data-reveal style="--d:.12s">
+              <span>02</span>
+              <p>Acompanhamento próximo do início ao pós-tratamento, com retornos programados.</p>
+            </div>
+          </div>
+
+          <div class="stats" data-reveal>
+            <div>
+              <strong data-count="2000" data-suffix="+">0</strong>
+              <span>implantes realizados</span>
+            </div>
+            <div>
+              <strong data-count="4.9" data-decimals="1">0</strong>
+              <span>avaliação média dos pacientes</span>
+            </div>
+            <div>
+              <strong>8</strong>
+              <span>especialidades integradas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRATAMENTOS ============ -->
+    <section class="section treatments" id="tratamentos">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker" data-reveal>Tratamentos</p>
+          <h2 class="h2" data-reveal>Do implante à estética: <em>cuidado completo.</em></h2>
+          <p class="section-sub" data-reveal>Todo plano começa com uma avaliação clínica e exames de imagem. A partir dela, montamos o tratamento na medida do seu sorriso e do seu tempo.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card" data-reveal>
+            <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#i-tooth"/><path d="M10 7.5c1-.6 2.3-.6 3.4.2"/><circle cx="15.5" cy="9" r="1.1"/></svg></div>
+            <span class="tag">Dentística</span>
+            <h3>Dentística</h3>
+            <p>Restaurações em resina, tratamento de cáries e recuperação de dentes fraturados ou desgastados, preservando ao máximo a estrutura natural.</p>
+            <a href="#contato" class="card-link" data-treatment="Dentística">Quero saber mais <svg class="ic"><use href="#i-arrow"/></svg></a>
+          </article>
+
+          <article class="card" data-reveal style="--d:.06s">
+            <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#i-tooth"/><path d="M12 6.5v6M9.6 13l-1 5M14.4 13l1 5"/></svg></div>
+            <span class="tag">Endodontia</span>
+            <h3>Endodontia (canal)</h3>
+            <p>Tratamento de canal para eliminar a dor, tratar a infecção e salvar o dente, com anestesia cuidadosa e acompanhamento na recuperação.</p>
+            <a href="#contato" class="card-link" data-treatment="Endodontia (canal)">Quero saber mais <svg class="ic"><use href="#i-arrow"/></svg></a>
+          </article>
+
+          <article class="card" data-reveal style="--d:.12s">
+            <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M4 20 15.5 8.5"/><path d="m15.5 8.5 3-3a2.1 2.1 0 0 1 3 3l-3 3z"/><path d="M8 16l2 2"/></svg></div>
+            <span class="tag">Cirurgia</span>
+            <h3>Cirurgia</h3>
+            <p>Extrações simples e de sisos, cirurgias de gengiva e procedimentos orais conduzidos com planejamento e protocolos de segurança.</p>
+            <a href="#contato" class="card-link" data-treatment="Cirurgia">Quero saber mais <svg class="ic"><use href="#i-arrow"/></svg></a>
+          </article>
+
+          <article class="card card--feature" data-reveal style="--d:.18s">
+            <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M7 3.5c-1.7 0-3 1.3-3 3 0 1.8 1.4 2.8 1.8 4.5h12.4C18.6 9.3 20 8.3 20 6.5c0-1.7-1.3-3-3-3-1.4 0-2.3.8-5 .8s-3.6-.8-5-.8z"/><path d="M9.5 11v2h5v-2M10 13l.5 8h3l.5-8M9.6 15.5h4.8M9.8 18h4.4"/></svg></div>
+            <span class="tag">Implantodontia</span>
+            <h3>Implantes</h3>
+            <p>Reposição de dentes perdidos com implantes de titânio, cirurgia planejada digitalmente e acompanhamento em cada etapa.</p>
+            <a href="#contato" class="card-link" data-treatment="Implantes dentários">Quero saber mais <svg class="ic"><use href="#i-arrow"/></svg></a>
+          </article>
+
+          <article class="card" data-reveal>
+            <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#i-tooth"/><path d="M5.2 6.5C6.4 4.6 9 4.4 12 5.2c3-.8 5.6-.6 6.8 1.3"/></svg></div>
+            <span class="tag">Estética</span>
+            <h3>Lentes de contato</h3>
+            <p>Lâminas ultrafinas que corrigem cor, forma e pequenos desalinhamentos, com aparência natural e preservação do dente.</p>
+            <a href="#contato" class="card-link" data-treatment="Lentes de contato dental">Quero saber mais <svg class="ic"><use href="#i-arrow"/></svg></a>
+          </article>
+
+          <article class="card" data-reveal style="--d:.06s">
+            <div class="card-icon"><svg viewBox="0 0 24 24"><use href="#i-tooth"/><path d="M19.5 1.5v3M18 3h3M3.5 1.5v2M2.5 2.5h2"/></svg></div>
+            <span class="tag">Estética</span>
+            <h3>Clareamento</h3>
+            <p>Clareamento em consultório e caseiro supervisionado, com controle de sensibilidade e resultado gradual.</p>
+            <a href="#contato" class="card-link" data-treatment="Clareamento dental">Quero saber mais <svg class="ic"><use href="#i-arrow"/></svg></a>
+          </article>
+
+          <article class="card" data-reveal style="--d:.12s">
+            <div class="card-icon"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="5" height="10" rx="2.4"/><rect x="9.5" y="7" width="5" height="10" rx="2.4"/><rect x="16" y="7" width="5" height="10" rx="2.4"/><path d="M2 12h20"/><rect x="4.4" y="10.8" width="2.2" height="2.4" rx=".5"/><rect x="10.9" y="10.8" width="2.2" height="2.4" rx=".5"/><rect x="17.4" y="10.8" width="2.2" height="2.4" rx=".5"/></svg></div>
+            <span class="tag">Ortodontia</span>
+            <h3>Ortodontia</h3>
+            <p>Aparelhos fixos e alinhadores transparentes para alinhar os dentes com conforto e previsibilidade.</p>
+            <a href="#contato" class="card-link" data-treatment="Ortodontia e alinhadores">Quero saber mais <svg class="ic"><use href="#i-arrow"/></svg></a>
+          </article>
+
+          <article class="card" data-reveal style="--d:.18s">
+            <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M3 9c0 6 4 11 9 11s9-5 9-11"/><path d="M3 9c3-2 6-3 9-3s6 1 9 3"/><path d="M7 7.2v3.6M10.3 6.3v4.2M13.7 6.3v4.2M17 7.2v3.6"/></svg></div>
+            <span class="tag">Reabilitação</span>
+            <h3>Prótese</h3>
+            <p>Coroas, próteses fixas e protocolos completos para devolver função, conforto e confiança ao sorriso.</p>
+            <a href="#contato" class="card-link" data-treatment="Próteses e reabilitação">Quero saber mais <svg class="ic"><use href="#i-arrow"/></svg></a>
+          </article>
+        </div>
+        <p class="cards-hint" aria-hidden="true"><i></i> Deslize para ver todos</p>
+      </div>
+    </section>
+
+    <!-- ============ DIFERENCIAIS ============ -->
+    <section class="section why" id="diferenciais">
+      <svg class="contours" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g fill="none" stroke-linecap="round">
+          <path d="M-50 120C150 60 260 210 450 160S760 40 920 120 1150 230 1260 150"/>
+          <path d="M-50 190C140 130 270 280 460 230S770 110 930 190 1150 300 1260 220"/>
+          <path d="M-50 260C130 200 280 350 470 300S780 180 940 260 1150 370 1260 290"/>
+          <path d="M-50 330C120 270 290 420 480 370S790 250 950 330 1150 440 1260 360"/>
+          <path d="M-50 400C110 340 300 490 490 440S800 320 960 400 1150 510 1260 430"/>
+          <path d="M-50 470C100 410 310 560 500 510S810 390 970 470 1150 580 1260 500"/>
+          <path d="M-50 540C90 480 320 630 510 580S820 460 980 540 1150 650 1260 570"/>
+          <path d="M-50 610C80 550 330 700 520 650S830 530 990 610 1150 720 1260 640"/>
+        </g>
+      </svg>
+      <div class="container why-grid">
+        <div class="why-head">
+          <p class="kicker kicker--light" data-reveal>Por que a Tropical</p>
+          <h2 class="h2 h2--light" data-reveal>Tecnologia com <em>jeito de gente.</em></h2>
+          <p class="why-sub" data-reveal>Unimos recursos modernos de diagnóstico a um atendimento próximo. Você entende cada etapa do tratamento e sabe exatamente o que esperar.</p>
+          <a href="#contato" class="btn btn-gold" data-reveal>Agendar avaliação <svg class="ic"><use href="#i-arrow"/></svg></a>
+        </div>
+
+        <ul class="features">
+          <li class="feature" data-reveal>
+            <span class="feature-n">01</span>
+            <div>
+              <h3>Atendimento humanizado</h3>
+              <p>Escuta atenta, explicações claras e decisões compartilhadas com você.</p>
+            </div>
+          </li>
+          <li class="feature" data-reveal style="--d:.08s">
+            <span class="feature-n">02</span>
+            <div>
+              <h3>Planejamento completo junto com o paciente</h3>
+              <p>Tomografia, escaneamento, radiografia periapical e panorâmica para planejar cirurgias com mais previsibilidade.</p>
+            </div>
+          </li>
+          <li class="feature" data-reveal style="--d:.16s">
+            <span class="feature-n">03</span>
+            <div>
+              <h3>Equipe especializada e qualificada</h3>
+              <p>Implantodontia, cirurgia, endodontia, dentística, periodontia, ortodontia e estética dental trabalhando de forma integrada.</p>
+            </div>
+          </li>
+          <li class="feature" data-reveal style="--d:.24s">
+            <span class="feature-n">04</span>
+            <div>
+              <h3>Biossegurança rigorosa</h3>
+              <p>Protocolos de esterilização e materiais certificados em todos os atendimentos, para garantir qualidade e segurança.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ DEPOIMENTOS ============ -->
+    <section class="section testimonials" id="depoimentos">
+      <div class="leaf-shade leaf-shade--right" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="kicker" data-reveal>Depoimentos</p>
+          <h2 class="h2" data-reveal>Histórias de quem voltou a <em>sorrir sem medo.</em></h2>
+        </div>
+
+        <div class="quotes">
+          <figure class="quote" data-reveal>
+            <div class="stars" aria-label="5 de 5 estrelas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+            <blockquote>“Cheguei com muito medo de dentista e saí da primeira consulta tranquila. Explicaram tudo com calma e hoje consigo comer e sorrir sem pensar duas vezes.”</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">MC</span><span><strong>Marina Carvalho</strong>Implantes dentários</span></figcaption>
+          </figure>
+          <figure class="quote" data-reveal style="--d:.1s">
+            <div class="stars" aria-label="5 de 5 estrelas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+            <blockquote>“O resultado ficou natural, do jeito que eu queria. Gostei principalmente da honestidade nas indicações: nada foi empurrado, tudo foi conversado.”</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">RS</span><span><strong>Rafael Souza</strong>Lentes de contato dental</span></figcaption>
+          </figure>
+          <figure class="quote" data-reveal style="--d:.2s">
+            <div class="stars" aria-label="5 de 5 estrelas"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+            <blockquote>“Equipe atenciosa, ambiente leve e horários que cabem na rotina. Faço minhas manutenções aqui há dois anos e sempre me sinto bem recebida.”</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">JP</span><span><strong>Juliana Prado</strong>Clareamento e prevenção</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAIXA CHUVA ============ -->
+    <section class="rain-band" aria-labelledby="rain-title">
+      <div class="rain" aria-hidden="true"></div>
+      <div class="container rain-inner">
+        <h2 id="rain-title" data-reveal>Lá fora, calor ou temporal.<br><em>Aqui dentro, o tempo é seu.</em></h2>
+        <a href="#contato" class="btn btn-gold btn-lg" data-reveal>Marcar minha avaliação <svg class="ic"><use href="#i-arrow"/></svg></a>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section faq" id="duvidas">
+      <div class="container faq-grid">
+        <div class="faq-head">
+          <p class="kicker" data-reveal>Dúvidas frequentes</p>
+          <h2 class="h2" data-reveal>Antes de marcar <em>sua avaliação.</em></h2>
+          <p class="section-sub" data-reveal>Não encontrou o que procurava? Mande uma mensagem e a nossa equipe responde.</p>
+          <a href="https://wa.me/5551980817777" target="_blank" rel="noopener" class="btn btn-outline" data-reveal><svg class="ic"><use href="#i-whats"/></svg> Perguntar no WhatsApp</a>
+        </div>
+
+        <div class="accordion">
+          <div class="acc-item" data-reveal>
+            <button class="acc-btn" aria-expanded="false">O implante dentário dói?<span class="acc-plus" aria-hidden="true"></span></button>
+            <div class="acc-panel"><div><p>A cirurgia é feita com anestesia local e a maioria dos pacientes relata desconforto leve nos primeiros dias, controlado com medicação prescrita. Acompanhamos você de perto no pós-operatório.</p></div></div>
+          </div>
+          <div class="acc-item" data-reveal>
+            <button class="acc-btn" aria-expanded="false">Quanto tempo dura o tratamento de implante?<span class="acc-plus" aria-hidden="true"></span></button>
+            <div class="acc-panel"><div><p>Depende do caso. Em situações favoráveis, a coroa definitiva pode ser instalada em poucos meses. O planejamento com tomografia permite estimar o seu prazo já na avaliação inicial.</p></div></div>
+          </div>
+          <div class="acc-item" data-reveal>
+            <button class="acc-btn" aria-expanded="false">A clínica atende convênios?<span class="acc-plus" aria-hidden="true"></span></button>
+            <div class="acc-panel"><div><p>O atendimento é particular, o que nos permite dedicar mais tempo a cada paciente. Emitimos nota fiscal e relatório do tratamento para você solicitar reembolso ao seu plano, quando houver essa cobertura.</p></div></div>
+          </div>
+          <div class="acc-item" data-reveal>
+            <button class="acc-btn" aria-expanded="false">Como funciona a primeira consulta?<span class="acc-plus" aria-hidden="true"></span></button>
+            <div class="acc-panel"><div><p>É uma avaliação completa: conversamos sobre sua história, examinamos a boca, solicitamos as imagens necessárias e apresentamos as opções de tratamento com valores e etapas.</p></div></div>
+          </div>
+          <div class="acc-item" data-reveal>
+            <button class="acc-btn" aria-expanded="false">Vocês atendem urgências?<span class="acc-plus" aria-hidden="true"></span></button>
+            <div class="acc-panel"><div><p>Sim. Reservamos horários na agenda para casos de dor, fratura de dente ou prótese solta. Basta ligar ou mandar mensagem no WhatsApp e verificamos a disponibilidade do dia.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTATO ============ -->
+    <section class="section contact" id="contato">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <p class="kicker" data-reveal>Agende sua avaliação</p>
+          <h2 class="h2" data-reveal>Vamos conversar sobre <em>o seu sorriso.</em></h2>
+          <p class="section-sub" data-reveal>Preencha o formulário e a mensagem segue direto para o nosso WhatsApp. A equipe responde para encontrar o melhor horário para você.</p>
+
+          <ul class="info-list">
+            <li data-reveal>
+              <span class="info-ic"><svg><use href="#i-pin"/></svg></span>
+              <div><small>Endereço</small><p>Rua Marechal Floriano, 931, anexo 1, Centro<br>Santa Cruz do Sul/RS</p></div>
+            </li>
+            <li data-reveal>
+              <span class="info-ic"><svg><use href="#i-whats"/></svg></span>
+              <div><small>WhatsApp</small><p><a href="https://wa.me/5551980817777" target="_blank" rel="noopener">(51) 98081-7777</a></p></div>
+            </li>
+            <li data-reveal>
+              <span class="info-ic"><svg><use href="#i-mail"/></svg></span>
+              <div><small>E-mail</small><p><a href="mailto:contato@tropicalimplantes.com.br">contato@tropicalimplantes.com.br</a></p></div>
+            </li>
+            <li data-reveal>
+              <span class="info-ic"><svg><use href="#i-clock"/></svg></span>
+              <div><small>Horário</small><p>Seg a sex, 8h às 19h · Sáb, 8h às 15h</p></div>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="form-contato" data-reveal novalidate>
+          <div class="form-title">
+            <h3>Pedir avaliação</h3>
+            <p>Leva menos de um minuto.</p>
+          </div>
+          <div class="field">
+            <input id="f-nome" name="nome" type="text" placeholder=" " autocomplete="name" required>
+            <label for="f-nome">Nome</label>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <input id="f-tel" name="telefone" type="tel" placeholder=" " autocomplete="tel" inputmode="tel" required>
+              <label for="f-tel">Telefone / WhatsApp</label>
+            </div>
+            <div class="field">
+              <input id="f-email" name="email" type="email" placeholder=" " autocomplete="email">
+              <label for="f-email">E-mail (opcional)</label>
+            </div>
+          </div>
+          <div class="field field--select">
+            <select id="f-trat" name="tratamento">
+              <option>Avaliação geral</option>
+              <option>Dentística</option>
+              <option>Endodontia (canal)</option>
+              <option>Cirurgia</option>
+              <option>Implantes dentários</option>
+              <option>Lentes de contato dental</option>
+              <option>Clareamento dental</option>
+              <option>Ortodontia e alinhadores</option>
+              <option>Próteses e reabilitação</option>
+            </select>
+            <label for="f-trat">Tratamento de interesse</label>
+          </div>
+          <div class="field">
+            <textarea id="f-msg" name="mensagem" rows="3" placeholder=" "></textarea>
+            <label for="f-msg">Mensagem (opcional)</label>
+          </div>
+          <p class="form-error" role="alert" hidden>Preencha seu nome e telefone para continuarmos.</p>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">
+            <svg class="ic"><use href="#i-whats"/></svg> Enviar pelo WhatsApp
+          </button>
+          <p class="form-note">Ao enviar, abrimos o WhatsApp com a sua mensagem pronta.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <svg class="footer-wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40c160-30 320-30 480 0s320 30 480 0 320-30 480 0V80H0z"/></svg>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#inicio" class="brand brand--light">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="29" class="ring"/><path class="river" d="M10 46c9-4 14-1 19-7s10-9 25-11"/><path class="tooth" d="M24 15c-3 0-5 2.4-5 5.8 0 4.6 2.6 7 3.4 12 .5 2.7 1.2 4.2 2.4 4.2 2 0 1.8-6 7.2-6s5.2 6 7.2 6c1.2 0 1.9-1.5 2.4-4.2.8-5 3.4-7.4 3.4-12C45 17.4 43 15 40 15c-2.6 0-4.2 1.4-8 1.4S26.6 15 24 15z"/></svg>
+          </span>
+          <span class="brand-text"><strong>Tropical Implantes</strong><small>Clínica Odontológica</small></span>
+        </a>
+        <p>Odontologia com escuta, precisão e acolhimento. Tratamos cada sorriso como único, do primeiro contato ao acompanhamento.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#clinica">A clínica</a></li>
+          <li><a href="#tratamentos">Tratamentos</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#duvidas">Dúvidas frequentes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li>Rua Marechal Floriano, 931, anexo 1, Centro</li>
+          <li>Santa Cruz do Sul/RS</li>
+          <li><a href="https://wa.me/5551980817777" target="_blank" rel="noopener">WhatsApp (51) 98081-7777</a></li>
+          <li><a href="mailto:contato@tropicalimplantes.com.br">contato@tropicalimplantes.com.br</a></li>
+          <li>Seg a sex, 8h às 19h · Sáb, 8h às 15h</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="ano">2026</span> Tropical Implantes. Todos os direitos reservados.</p>
+      <p>Responsável técnico: Valdey Feitoza · CRO-RS 33290</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5551980817777" class="wa-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg><use href="#i-whats"/></svg>
+  </a>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
