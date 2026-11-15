@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<style>
+:root{ --y:#FFE53B; --y2:#FFD21F; --k:#111111; --red:#D9232B; --teal:#5CD6DC; --w:#FFFFFF; }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden}
+body{font-family:"Inter",sans-serif;color:var(--k);background:var(--y);position:relative}
+.bg{position:absolute;inset:0;opacity:.9;
+ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='300' viewBox='0 0 420 300'%3E%3Cg fill='none' stroke='%23FFD21F' stroke-width='14' stroke-linejoin='round'%3E%3Cg transform='translate(20 40) rotate(-8 100 40)'%3E%3Crect x='0' y='0' width='150' height='100' rx='42'/%3E%3Crect x='190' y='0' width='150' height='100' rx='42'/%3E%3Cpath d='M150 40q20-18 40 0'/%3E%3C/g%3E%3Cg transform='translate(230 190) rotate(10 90 40)'%3E%3Crect x='0' y='0' width='110' height='76' rx='34'/%3E%3Crect x='140' y='0' width='110' height='76' rx='34'/%3E%3Cpath d='M110 30q15-14 30 0'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+ background-size:420px 300px}
+.pill{position:absolute;left:60px;top:80px;background:var(--k);color:var(--y);font-weight:800;font-size:44px;letter-spacing:.09em;padding:14px 38px;border-radius:999px}
+h1{position:absolute;left:60px;top:160px;font-weight:900;font-size:152px;line-height:.95;letter-spacing:-.045em;text-transform:uppercase}
+.burst{position:absolute;left:560px;top:292px;width:450px;height:300px;transform:rotate(-6deg)}
+.burst svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.burst b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--w);font-weight:900;font-size:84px;letter-spacing:-.045em;line-height:1}
+.photo{position:absolute;left:60px;top:590px;width:410px;height:520px;border-radius:36px;overflow:hidden;border:6px solid var(--k);box-shadow:12px 12px 0 var(--k);background:var(--y)}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.price{position:absolute;left:505px;top:590px;width:515px;height:285px;background:var(--w);border:6px solid var(--k);border-radius:32px;box-shadow:12px 12px 0 var(--k);padding:26px 28px}
+.price .a{font-weight:900;font-size:60px;line-height:1;letter-spacing:-.02em}
+.price .b{font-weight:700;font-size:42px;margin-top:6px}
+.price .c{font-weight:900;font-size:88px;line-height:1;letter-spacing:-.045em;color:var(--red);margin-top:10px;white-space:nowrap}
+.promo{position:absolute;left:505px;top:910px;width:515px;height:200px;background:var(--k);color:var(--y);border-radius:32px;padding:26px 28px;display:flex;flex-direction:column;justify-content:center}
+.promo .a{font-weight:700;font-size:42px;color:var(--w)}
+.promo .b{font-weight:900;font-size:62px;line-height:1.02;letter-spacing:-.03em;text-transform:uppercase}
+.date{position:absolute;left:60px;top:1170px;width:960px;height:150px;background:var(--k);border-radius:32px;display:flex;align-items:center;gap:34px;padding:0 40px}
+.date .d{font-weight:900;font-size:112px;letter-spacing:-.05em;color:var(--y);line-height:1}
+.date .d small{font-size:48px;letter-spacing:-.02em;color:var(--w);margin-left:4px}
+.date .t{display:flex;flex-direction:column;gap:2px}
+.date .t b{font-weight:900;font-size:54px;color:var(--w);letter-spacing:-.01em;line-height:1.05}
+.date .t span{font-weight:800;font-size:50px;color:var(--y);line-height:1.05}
+.loc{position:absolute;left:60px;top:1344px;width:960px;height:302px;background:var(--teal);border:6px solid var(--k);border-radius:32px;padding:22px 34px 0 124px;display:flex;flex-direction:column;align-items:flex-start}
+.loc .pin{position:absolute;left:34px;top:34px;width:68px;height:68px}
+.loc .a{font-weight:900;font-size:56px;line-height:1.02;letter-spacing:-.03em;text-transform:uppercase}
+.loc .b{font-weight:700;font-size:40px;margin-top:6px}
+.loc .c{margin-top:14px;background:var(--k);color:var(--y);font-weight:900;font-size:46px;letter-spacing:.02em;padding:8px 28px 10px;border-radius:999px;text-transform:uppercase}
+.logos{position:absolute;left:60px;top:1684px;width:960px;height:186px;background:var(--w);border-radius:28px;display:flex;align-items:center;justify-content:center;border:6px solid var(--k)}
+.logos img{width:900px;display:block}
+</style></head><body>
+<div class="bg"></div>
+<div class="pill">AÇÃO COMUNITÁRIA</div>
+<h1>Exame de<br>vista</h1>
+<div class="burst"><svg viewBox="0 0 450 300"><polygon points="225.0,25.0 249.5,46.1 282.8,30.1 296.5,54.5 335.8,44.8 337.8,70.6 379.9,68.1 369.9,93.2 411.5,98.1 390.2,120.4 427.9,132.2 397.2,150.0 427.9,167.8 390.2,179.6 411.5,201.9 369.9,206.8 379.9,231.9 337.8,229.4 335.8,255.2 296.5,245.5 282.8,269.9 249.5,253.9 225.0,275.0 200.5,253.9 167.2,269.9 153.5,245.5 114.2,255.2 112.2,229.4 70.1,231.9 80.1,206.8 38.5,201.9 59.8,179.6 22.1,167.8 52.8,150.0 22.1,132.2 59.8,120.4 38.5,98.1 80.1,93.2 70.1,68.1 112.2,70.6 114.2,44.8 153.5,54.5 167.2,30.1 200.5,46.1" fill="#111" transform="translate(9 11)"/><polygon points="225.0,25.0 249.5,46.1 282.8,30.1 296.5,54.5 335.8,44.8 337.8,70.6 379.9,68.1 369.9,93.2 411.5,98.1 390.2,120.4 427.9,132.2 397.2,150.0 427.9,167.8 390.2,179.6 411.5,201.9 369.9,206.8 379.9,231.9 337.8,229.4 335.8,255.2 296.5,245.5 282.8,269.9 249.5,253.9 225.0,275.0 200.5,253.9 167.2,269.9 153.5,245.5 114.2,255.2 112.2,229.4 70.1,231.9 80.1,206.8 38.5,201.9 59.8,179.6 22.1,167.8 52.8,150.0 22.1,132.2 59.8,120.4 38.5,98.1 80.1,93.2 70.1,68.1 112.2,70.6 114.2,44.8 153.5,54.5 167.2,30.1 200.5,46.1" fill="#D9232B" stroke="#111" stroke-width="6" stroke-linejoin="round"/></svg><b>GRÁTIS!</b></div>
+
+<div class="photo"><img src="assets/pessoas.png" alt="Três pessoas sorrindo usando óculos"></div>
+<div class="price"><div class="a">ÓCULOS</div><div class="b">a partir de</div><div class="c">R$ 250,00</div></div>
+<div class="promo"><div class="a">E ainda</div><div class="b">promoções<br>exclusivas!</div></div>
+
+<div class="date"><div class="d">28/11<small>/2026</small></div><div class="t"><b>SÁBADO</b><span>das 8h às 17h</span></div></div>
+
+<div class="loc">
+  <svg class="pin" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z" fill="#D9232B"/><circle cx="12" cy="9.5" r="2.6" fill="#fff"/></svg>
+  <div class="a">Escola Municipal<br>Roxana Bonessi</div>
+  <div class="b">Ao lado do Mercado Municipal</div>
+  <div class="c">Presidente Figueiredo</div>
+</div>
+
+<div class="logos"><img src="assets/logos.png" alt="Ótica Nilky, Zeiss, Transitions, Varilux e Bluecut"></div>
+</body></html>
