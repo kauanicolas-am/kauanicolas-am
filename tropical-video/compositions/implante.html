@@ -1,0 +1,86 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      font-family: "Montserrat", sans-serif;
+      color: #1f2e23;
+      background:
+        radial-gradient(70% 45% at 90% 0%, rgba(196, 220, 170, 0.55), transparent 60%),
+        linear-gradient(180deg, #faf9f6, #e9eddf);
+    }
+    #root .i-pillrow { position: absolute; left: 0; top: 290px; width: 1080px; display: flex; justify-content: center; }
+    #root #i-pill {
+      padding: 18px 40px; border-radius: 999px;
+      background: #3a5a40; color: #faf9f6;
+      font-size: 32px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    }
+    #root #i-svg { position: absolute; left: 60px; top: 410px; width: 960px; height: 640px; }
+    #root #i-title {
+      position: absolute; left: 70px; top: 1110px; width: 940px;
+      font-family: "Playfair Display", serif; font-weight: 700;
+      font-size: 100px; line-height: 1.04; letter-spacing: -0.02em; color: #1f2e23;
+    }
+    #root #i-title em { font-style: normal; color: #4a6b53; }
+    #root #i-underline { position: absolute; left: 70px; top: 1334px; height: 8px; width: 420px; border-radius: 8px; background: #c8a55a; }
+    #root #i-sub { position: absolute; left: 70px; top: 1380px; width: 940px; font-size: 44px; font-weight: 600; line-height: 1.35; text-wrap: balance; color: #4b6353; }
+  </style>
+
+  <div id="root" data-composition-id="implante" data-width="1080" data-height="1920">
+    <div class="i-pillrow"><div id="i-pill" class="clip" data-start="0" data-duration="4.2">A solução</div></div>
+
+    <svg id="i-svg" class="clip" data-start="0" data-duration="4.2" viewBox="0 0 960 640" aria-label="Corte da mandíbula com um implante de titânio e a coroa no lugar do dente ausente">
+      <defs>
+        <linearGradient id="i-metal" x1="0" x2="1" y1="0" y2="0">
+          <stop offset="0" stop-color="#8d98a0" />
+          <stop offset="0.45" stop-color="#e8edf0" />
+          <stop offset="1" stop-color="#7c878f" />
+        </linearGradient>
+      </defs>
+      <!-- osso -->
+      <rect x="0" y="300" width="960" height="340" rx="40" fill="#d9c7a8" />
+      <rect x="0" y="300" width="960" height="60" fill="#d9c7a8" />
+      <!-- raízes e coroas vizinhas -->
+      <path d="M130 270 L150 480 Q190 520 230 480 L250 270 Z" fill="#f3ebdc" stroke="#b8a37f" stroke-width="3" />
+      <path d="M710 270 L730 480 Q770 520 810 480 L830 270 Z" fill="#f3ebdc" stroke="#b8a37f" stroke-width="3" />
+      <!-- pino de titânio (dentro do osso) -->
+      <g id="i-post">
+        <path d="M447 296 H513 V440 Q513 486 480 492 Q447 486 447 440 Z" fill="url(#i-metal)" stroke="#6b767e" stroke-width="3" />
+        <path d="M447 330 H513 M447 360 H513 M447 390 H513 M447 420 H513 M451 450 H509" stroke="#5f6a72" stroke-width="4" />
+      </g>
+      <!-- gengiva -->
+      <rect x="0" y="262" width="960" height="58" fill="#c27b6b" />
+      <!-- pilar e coroa nova -->
+      <g id="i-crown">
+        <rect x="462" y="238" width="36" height="52" fill="url(#i-metal)" stroke="#6b767e" stroke-width="3" />
+        <rect x="370" y="72" width="220" height="182" rx="80" fill="#ffffff" stroke="#b8a37f" stroke-width="4" />
+      </g>
+      <rect x="70" y="40" width="240" height="236" rx="90" fill="#ffffff" stroke="#b8a37f" stroke-width="4" />
+      <rect x="650" y="40" width="240" height="236" rx="90" fill="#ffffff" stroke="#b8a37f" stroke-width="4" />
+      <!-- rótulos -->
+      <text id="i-lab1" x="480" y="54" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="34" font-weight="700" fill="#1f2e23">Coroa</text>
+      <path id="i-leader" d="M480 500 V548" stroke="#1f2e23" stroke-width="4" stroke-linecap="round" />
+      <text id="i-lab2" x="480" y="590" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="34" font-weight="700" fill="#1f2e23">Pino de titânio</text>
+    </svg>
+
+    <h2 id="i-title" class="clip" data-start="0" data-duration="4.2">O implante faz<br /><em>o papel da raiz.</em></h2>
+    <div id="i-underline" class="clip" data-start="0" data-duration="4.2"></div>
+    <p id="i-sub" class="clip" data-start="0" data-duration="4.2">Um pino de titânio, planejado com tomografia.</p>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#i-pill", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 0);
+    tl.fromTo("#i-svg", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 0);
+    tl.fromTo("#i-title", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.15);
+    tl.fromTo("#i-underline", { width: 0 }, { width: 420, duration: 0.7, ease: "power2.out" }, 0.8);
+    // o pino desce até o osso, depois a coroa encaixa por cima
+    tl.fromTo("#i-post", { y: -360, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "power3.out" }, 0.4);
+    tl.fromTo("#i-leader,#i-lab2", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 1.3);
+    tl.fromTo("#i-crown", { y: -320, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9, ease: "power3.out" }, 1.5);
+    tl.fromTo("#i-lab1", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 2.3);
+    tl.fromTo("#i-sub", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 1.2);
+    window.__timelines["implante"] = tl;
+  </script>
+</template>

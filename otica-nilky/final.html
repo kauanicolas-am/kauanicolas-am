@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<style>
+:root{--bg:#FFFBA9;--line:#FFE522;--y:#FFE62B;--blue:#1E6FD0;--navy:#14145C;--red:#EE2B2B;--mag:#E5238F;--cy:#3FC3D9;--grn:#7BC62D;--org:#F5941E;--pur:#7A3A98;--w:#fff}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden}
+body{font-family:"Inter",sans-serif;color:var(--navy);background:var(--bg);position:relative}
+.bgsvg{position:absolute;inset:0;width:1080px;height:1920px}
+.ht{position:absolute;background-image:radial-gradient(var(--navy) 2.4px,transparent 3px);background-size:17px 17px;opacity:.2}
+.ht.a{left:-20px;top:260px;width:360px;height:360px;-webkit-mask-image:radial-gradient(circle at 0 50%,#000,transparent 70%);mask-image:radial-gradient(circle at 0 50%,#000,transparent 70%)}
+.ht.b{right:-20px;top:1000px;width:360px;height:420px;-webkit-mask-image:radial-gradient(circle at 100% 50%,#000,transparent 70%);mask-image:radial-gradient(circle at 100% 50%,#000,transparent 70%)}
+.topbar{position:absolute;left:0;top:0;width:1080px;height:16px;display:flex}
+.topbar i{flex:1}
+.mega{position:absolute;left:-40px;top:26px;width:330px;height:290px;transform:rotate(-14deg)}
+.title{position:absolute;left:272px;top:44px;font-weight:900;text-transform:uppercase;letter-spacing:-.045em;line-height:.95;text-shadow:5px 5px 0 #fff;color:var(--navy)}
+.title .l1{font-size:96px;display:block}
+.title .l2{font-size:100px;display:block;margin-left:-4px;margin-top:10px}
+.photo{position:absolute;left:30px;top:590px;width:461px;height:721px;border:8px solid var(--navy);border-radius:30px;overflow:hidden;box-shadow:12px 12px 0 var(--navy);background:var(--bg)}
+.photo img{width:445px;height:704px;display:block}
+.over{position:absolute;inset:0;width:1080px;height:1920px;pointer-events:none}
+.btxt{position:absolute;left:78px;top:340px;font-weight:900;font-size:112px;line-height:.96;letter-spacing:-.05em;text-transform:uppercase;color:var(--w)}
+.btxt em{font-style:normal;color:var(--y)}
+.burst{position:absolute;left:438px;top:480px;width:460px;height:300px;transform:rotate(-8deg)}
+.burst svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.burst b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--w);font-weight:900;font-size:86px;letter-spacing:-.045em;text-shadow:4px 4px 0 var(--navy)}
+.pstar{position:absolute;left:480px;top:714px;width:580px;height:330px;transform:rotate(3deg)}
+.pstar svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.price{position:absolute;left:522px;top:750px;width:500px;height:236px;background:var(--w);border:7px solid var(--navy);border-radius:30px;padding:14px 26px;transform:rotate(3deg);box-shadow:8px 8px 0 var(--navy)}
+.price .a{font-weight:900;font-size:56px;line-height:1;letter-spacing:-.02em}
+.price .b{font-weight:800;font-size:40px;margin-top:2px}
+.price .c{font-weight:900;font-size:80px;line-height:1;letter-spacing:-.05em;color:var(--red);margin-top:4px;white-space:nowrap}
+.promo{position:absolute;left:444px;top:984px;width:600px;height:290px}
+.promo svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.promo div{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transform:rotate(-3deg);color:var(--w);text-shadow:3px 3px 0 var(--navy)}
+.promo .a{font-weight:800;font-size:42px;line-height:1}
+.promo .b{font-weight:900;font-size:58px;line-height:1;letter-spacing:-.04em;text-transform:uppercase;margin-top:4px}
+.date{position:absolute;left:46px;top:1340px;width:988px;height:124px;background:var(--navy);border-radius:30px;display:flex;align-items:center;gap:30px;padding:0 38px;box-shadow:8px 8px 0 #fff}
+.date .d{font-weight:900;font-size:98px;letter-spacing:-.05em;color:var(--y);line-height:1}
+.date .d small{font-size:44px;letter-spacing:-.02em;color:var(--w);margin-left:4px}
+.date .t{display:flex;flex-direction:column}
+.date .t b{font-weight:900;font-size:50px;color:var(--w);line-height:1.04}
+.date .t span{font-weight:800;font-size:46px;color:var(--y);line-height:1.04}
+.loc{position:absolute;left:46px;top:1486px;width:988px;height:186px;background:var(--blue);border:7px solid var(--navy);border-radius:30px;padding:12px 30px 0 120px;display:flex;flex-direction:column;align-items:flex-start;box-shadow:8px 8px 0 var(--navy);color:var(--w)}
+.loc .pin{position:absolute;left:28px;top:36px;width:68px;height:68px}
+.loc .a{font-weight:900;font-size:41px;line-height:1.05;letter-spacing:-.03em;text-transform:uppercase;white-space:nowrap}
+.loc .b{font-weight:700;font-size:34px;margin-top:2px}
+.loc .c{margin-top:8px;background:var(--y);color:var(--navy);font-weight:900;font-size:40px;letter-spacing:.02em;padding:4px 24px 6px;border-radius:999px;text-transform:uppercase}
+.logos{position:absolute;left:46px;top:1700px;width:988px;height:190px;background:var(--w);border:7px solid var(--navy);border-radius:26px;display:flex;align-items:center;justify-content:center}
+.logos img{width:900px;display:block}
+</style></head><body>
+<svg class="bgsvg" viewBox="0 0 1080 1920" aria-hidden="true">
+ <defs><pattern id="gl" width="560" height="500" patternUnits="userSpaceOnUse">
+  <g fill="none" stroke="#FFE522" stroke-width="22" stroke-linejoin="round" stroke-linecap="round">
+   <g transform="translate(40 60) rotate(-10 130 60)"><circle cx="70" cy="62" r="64"/><circle cx="230" cy="62" r="64"/><path d="M134 54q16-14 32 0"/></g>
+   <g transform="translate(300 250) rotate(8 120 50)"><path d="M0 20q60-30 110 0v50q-20 36-60 34t-50-40z"/><path d="M150 20q50-30 110 0v50q-10 36-50 40t-60-34z"/><path d="M110 40q20-14 40 0"/></g>
+   <g transform="translate(20 330) rotate(6 120 50)"><rect x="0" y="0" width="120" height="86" rx="34"/><rect x="150" y="0" width="120" height="86" rx="34"/><path d="M120 34q15-14 30 0"/></g>
+   <g transform="translate(360 30) rotate(14 80 40)"><path d="M0 10q40-24 90 0 6 60-40 66T0 10z"/></g>
+  </g></pattern></defs>
+ <rect width="1080" height="1920" fill="#FFFBA9"/><rect width="1080" height="1920" fill="url(#gl)"/>
+</svg>
+<div class="ht a"></div><div class="ht b"></div>
+<div class="topbar"><i style="background:#EE2B2B"></i><i style="background:#F5941E"></i><i style="background:#FFE62B"></i><i style="background:#7BC62D"></i><i style="background:#3FC3D9"></i><i style="background:#1E6FD0"></i><i style="background:#7A3A98"></i><i style="background:#E5238F"></i></div>
+
+<svg class="mega" viewBox="0 0 330 290" aria-hidden="true">
+ <defs><pattern id="dots" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="2.2" fill="#14145C" opacity=".45"/></pattern></defs>
+ <polygon points="80,110 238,40 238,190 80,150" fill="#F4F4F4" stroke="#14145C" stroke-width="8" stroke-linejoin="round"/>
+ <polygon points="80,130 238,115 238,190 80,150" fill="url(#dots)"/>
+ <rect x="44" y="104" width="44" height="52" rx="10" fill="#8A8A8A" stroke="#14145C" stroke-width="8"/>
+ <ellipse cx="238" cy="115" rx="30" ry="78" fill="#3A3A5A" stroke="#14145C" stroke-width="8"/>
+ <ellipse cx="236" cy="115" rx="16" ry="52" fill="#9A9AB5"/>
+ <rect x="112" y="148" width="42" height="66" rx="12" fill="#14145C" transform="rotate(-8 133 180)"/>
+ <polygon points="270,48 304,14 296,56 326,46 282,104 292,70" fill="#E5238F" stroke="#14145C" stroke-width="5" stroke-linejoin="round"/>
+ <polygon points="274,150 312,150 292,170 322,186 276,196 294,172" fill="#3FC3D9" stroke="#14145C" stroke-width="5" stroke-linejoin="round"/>
+</svg>
+<div class="title"><span class="l1">Ação</span><span class="l2">Comunitária</span></div>
+
+<div class="photo"><img src="assets/pessoas-inteira.png" alt="Três pessoas sorrindo usando óculos"></div>
+
+<svg class="over" viewBox="0 0 1080 1920"><polygon points="29.0,301.0 29.0,684.4 135.2,684.4 135.2,688.0 142.4,718.6 155.9,726.7 170.3,719.5 189.2,704.2 192.8,688.0 196.4,675.4 353.9,610.6 371.0,628.6 758.0,628.6 758.0,301.0" fill="#14145C" transform="translate(11 12)"/><polygon points="29.0,301.0 29.0,684.4 135.2,684.4 135.2,688.0 142.4,718.6 155.9,726.7 170.3,719.5 189.2,704.2 192.8,688.0 196.4,675.4 353.9,610.6 371.0,628.6 758.0,628.6 758.0,301.0" fill="#1E6FD0" stroke="#14145C" stroke-width="9" stroke-linejoin="round"/></svg>
+<div class="btxt">Exame de<br><em>vista</em></div>
+
+<div class="burst"><svg viewBox="0 0 460 300"><polygon points="230.0,15.0 256.5,37.8 292.5,20.5 307.5,46.8 350.0,36.4 352.1,64.3 397.8,61.6 386.9,88.7 431.9,93.9 408.9,118.1 449.7,130.8 416.5,150.0 449.7,169.2 408.9,181.9 431.9,206.1 386.9,211.3 397.8,238.4 352.1,235.7 350.0,263.6 307.5,253.2 292.5,279.5 256.5,262.2 230.0,285.0 203.5,262.2 167.5,279.5 152.5,253.2 110.0,263.6 107.9,235.7 62.2,238.4 73.1,211.3 28.1,206.1 51.1,181.9 10.3,169.2 43.5,150.0 10.3,130.8 51.1,118.1 28.1,93.9 73.1,88.7 62.2,61.6 107.9,64.3 110.0,36.4 152.5,46.8 167.5,20.5 203.5,37.8" fill="#14145C" transform="translate(9 11)"/><polygon points="230.0,15.0 256.5,37.8 292.5,20.5 307.5,46.8 350.0,36.4 352.1,64.3 397.8,61.6 386.9,88.7 431.9,93.9 408.9,118.1 449.7,130.8 416.5,150.0 449.7,169.2 408.9,181.9 431.9,206.1 386.9,211.3 397.8,238.4 352.1,235.7 350.0,263.6 307.5,253.2 292.5,279.5 256.5,262.2 230.0,285.0 203.5,262.2 167.5,279.5 152.5,253.2 110.0,263.6 107.9,235.7 62.2,238.4 73.1,211.3 28.1,206.1 51.1,181.9 10.3,169.2 43.5,150.0 10.3,130.8 51.1,118.1 28.1,93.9 73.1,88.7 62.2,61.6 107.9,64.3 110.0,36.4 152.5,46.8 167.5,20.5 203.5,37.8" fill="#EE2B2B" stroke="#14145C" stroke-width="7" stroke-linejoin="round"/></svg><b>GRÁTIS!</b></div>
+
+<div class="pstar"><svg viewBox="0 0 570 330"><polygon points="285.0,5.0 315.4,22.0 352.0,9.6 374.4,30.4 415.1,23.3 428.2,46.5 470.7,45.2 473.6,69.5 515.4,74.1 508.1,98.1 546.8,108.3 529.7,130.5 563.0,145.7 537.0,165.0 563.0,184.3 529.7,199.5 546.8,221.7 508.1,231.9 515.4,255.9 473.6,260.5 470.7,284.8 428.2,283.5 415.1,306.7 374.4,299.6 352.0,320.4 315.4,308.0 285.0,325.0 254.6,308.0 218.0,320.4 195.6,299.6 154.9,306.7 141.8,283.5 99.3,284.8 96.4,260.5 54.6,255.9 61.9,231.9 23.2,221.7 40.3,199.5 7.0,184.3 33.0,165.0 7.0,145.7 40.3,130.5 23.2,108.3 61.9,98.1 54.6,74.1 96.4,69.5 99.3,45.2 141.8,46.5 154.9,23.3 195.6,30.4 218.0,9.6 254.6,22.0" fill="#14145C" transform="translate(8 10)"/><polygon points="285.0,5.0 315.4,22.0 352.0,9.6 374.4,30.4 415.1,23.3 428.2,46.5 470.7,45.2 473.6,69.5 515.4,74.1 508.1,98.1 546.8,108.3 529.7,130.5 563.0,145.7 537.0,165.0 563.0,184.3 529.7,199.5 546.8,221.7 508.1,231.9 515.4,255.9 473.6,260.5 470.7,284.8 428.2,283.5 415.1,306.7 374.4,299.6 352.0,320.4 315.4,308.0 285.0,325.0 254.6,308.0 218.0,320.4 195.6,299.6 154.9,306.7 141.8,283.5 99.3,284.8 96.4,260.5 54.6,255.9 61.9,231.9 23.2,221.7 40.3,199.5 7.0,184.3 33.0,165.0 7.0,145.7 40.3,130.5 23.2,108.3 61.9,98.1 54.6,74.1 96.4,69.5 99.3,45.2 141.8,46.5 154.9,23.3 195.6,30.4 218.0,9.6 254.6,22.0" fill="#3FC3D9" stroke="#14145C" stroke-width="7" stroke-linejoin="round"/></svg></div>
+<div class="price"><div class="a">ÓCULOS</div><div class="b">a partir de</div><div class="c">R$ 250,00</div></div>
+<div class="promo"><svg viewBox="0 0 560 290"><polygon points="280.0,8.0 312.0,23.3 350.4,12.8 373.7,31.9 416.0,27.0 429.0,48.6 472.3,49.6 474.2,72.2 515.6,79.0 506.2,101.1 542.7,113.2 522.7,133.3 552.0,150.0 522.7,166.7 542.7,186.8 506.2,198.9 515.6,221.0 474.2,227.8 472.3,250.4 429.0,251.4 416.0,273.0 373.7,268.1 350.4,287.2 312.0,276.7 280.0,292.0 248.0,276.7 209.6,287.2 186.3,268.1 144.0,273.0 131.0,251.4 87.7,250.4 85.8,227.8 44.4,221.0 53.8,198.9 17.3,186.8 37.3,166.7 8.0,150.0 37.3,133.3 17.3,113.2 53.8,101.1 44.4,79.0 85.8,72.2 87.7,49.6 131.0,48.6 144.0,27.0 186.3,31.9 209.6,12.8 248.0,23.3" fill="#14145C" transform="translate(8 10)"/><polygon points="280.0,8.0 312.0,23.3 350.4,12.8 373.7,31.9 416.0,27.0 429.0,48.6 472.3,49.6 474.2,72.2 515.6,79.0 506.2,101.1 542.7,113.2 522.7,133.3 552.0,150.0 522.7,166.7 542.7,186.8 506.2,198.9 515.6,221.0 474.2,227.8 472.3,250.4 429.0,251.4 416.0,273.0 373.7,268.1 350.4,287.2 312.0,276.7 280.0,292.0 248.0,276.7 209.6,287.2 186.3,268.1 144.0,273.0 131.0,251.4 87.7,250.4 85.8,227.8 44.4,221.0 53.8,198.9 17.3,186.8 37.3,166.7 8.0,150.0 37.3,133.3 17.3,113.2 53.8,101.1 44.4,79.0 85.8,72.2 87.7,49.6 131.0,48.6 144.0,27.0 186.3,31.9 209.6,12.8 248.0,23.3" fill="#E5238F" stroke="#14145C" stroke-width="7" stroke-linejoin="round"/></svg><div><span class="a">E ainda</span><span class="b">Promoções<br>exclusivas!</span></div></div>
+
+<div class="date"><div class="d">28/11<small>/2026</small></div><div class="t"><b>SÁBADO</b><span>das 8h às 17h</span></div></div>
+<div class="loc">
+ <svg class="pin" viewBox="0 0 24 24" fill="none" stroke="#14145C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z" fill="#EE2B2B"/><circle cx="12" cy="9.5" r="2.6" fill="#fff"/></svg>
+ <div class="a">Escola Municipal Roxana Bonessi</div>
+ <div class="b">Ao lado do Mercado Municipal</div>
+ <div class="c">Presidente Figueiredo</div>
+</div>
+<div class="logos"><img src="assets/logos-completa.png" alt="Ótica Nilky, Zeiss, Transitions, Varilux e Bluecut"></div>
+</body></html>

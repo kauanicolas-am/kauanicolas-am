@@ -1,0 +1,92 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      font-family: "Montserrat", sans-serif;
+      color: #faf9f6;
+      background:
+        radial-gradient(80% 50% at 15% 0%, rgba(84, 51, 35, 0.7), transparent 60%),
+        radial-gradient(70% 50% at 100% 100%, rgba(58, 90, 64, 0.5), transparent 60%),
+        linear-gradient(180deg, #241c15, #16211a);
+    }
+    #root .o-lines { position: absolute; inset: 0; width: 1080px; height: 1920px; }
+    #root .o-lines path { fill: none; stroke: rgba(165, 186, 149, 0.22); stroke-width: 2; stroke-dasharray: 10 16; }
+    #root .o-lines path:nth-child(even) { stroke: rgba(200, 165, 90, 0.2); }
+    #root .o-pillrow { position: absolute; left: 0; top: 290px; width: 1080px; display: flex; justify-content: center; }
+    #root #o-pill {
+      padding: 18px 40px; border-radius: 999px; border: 3px solid #c8a55a;
+      background: rgba(200, 165, 90, 0.12); color: #e6cf98;
+      font-size: 32px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    }
+    #root #o-svg { position: absolute; left: 60px; top: 410px; width: 960px; height: 640px; }
+    #root #o-title {
+      position: absolute; left: 70px; top: 1110px; width: 940px;
+      font-family: "Playfair Display", serif; font-weight: 700;
+      font-size: 112px; line-height: 1.04; letter-spacing: -0.02em;
+    }
+    #root #o-title em { font-style: normal; color: #c8a55a; }
+    #root #o-sub { position: absolute; left: 70px; top: 1400px; width: 940px; font-size: 44px; font-weight: 600; line-height: 1.35; text-wrap: balance; color: rgba(250, 249, 246, 0.82); }
+  </style>
+
+  <div id="root" data-composition-id="osso" data-width="1080" data-height="1920">
+    <svg class="o-lines" data-layout-allow-overflow viewBox="0 0 1080 1920" aria-hidden="true">
+      <path id="o-l1" d="M-40 1640C180 1570 320 1720 540 1660S900 1560 1120 1640" />
+      <path id="o-l2" d="M-40 1710C180 1640 320 1790 540 1730S900 1630 1120 1710" />
+      <path id="o-l3" d="M-40 1780C180 1710 320 1860 540 1800S900 1700 1120 1780" />
+      <path id="o-l4" d="M-40 1850C180 1780 320 1930 540 1870S900 1770 1120 1850" />
+    </svg>
+    <div class="o-pillrow"><div id="o-pill" class="clip" data-start="0" data-duration="4.2">O que acontece depois</div></div>
+
+    <svg id="o-svg" class="clip" data-start="0" data-duration="4.2" viewBox="0 0 960 640" aria-label="Corte da mandíbula com um dente ausente e o osso encolhendo">
+      <!-- osso -->
+      <rect x="0" y="400" width="960" height="240" rx="40" fill="#e9dcc8" />
+      <rect x="0" y="300" width="330" height="140" fill="#e9dcc8" />
+      <rect x="630" y="300" width="330" height="140" fill="#e9dcc8" />
+      <rect id="o-ridge" x="330" y="300" width="300" height="140" fill="#e9dcc8" />
+      <!-- raízes -->
+      <g id="o-t1">
+        <path d="M130 270 L150 480 Q190 520 230 480 L250 270 Z" fill="#f3ebdc" stroke="#cdba9a" stroke-width="3" />
+        <rect x="70" y="40" width="240" height="250" rx="90" fill="#faf9f6" />
+      </g>
+      <g id="o-t2">
+        <path d="M710 270 L730 480 Q770 520 810 480 L830 270 Z" fill="#f3ebdc" stroke="#cdba9a" stroke-width="3" />
+        <rect x="650" y="40" width="240" height="250" rx="90" fill="#faf9f6" />
+      </g>
+      <!-- gengiva -->
+      <rect x="0" y="262" width="330" height="58" fill="#c27b6b" />
+      <rect x="630" y="262" width="330" height="58" fill="#c27b6b" />
+      <rect id="o-cap" x="330" y="282" width="300" height="38" rx="14" fill="#c27b6b" />
+      <!-- coroas por cima da gengiva -->
+      <rect x="70" y="40" width="240" height="236" rx="90" fill="#faf9f6" />
+      <rect x="650" y="40" width="240" height="236" rx="90" fill="#faf9f6" />
+      <!-- nível original -->
+      <line id="o-orig" x1="330" y1="300" x2="630" y2="300" stroke="#c8a55a" stroke-width="5" stroke-dasharray="14 12" />
+      <text id="o-lab" x="480" y="190" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="32" font-weight="700" fill="#e6cf98">Nível original</text>
+      <text id="o-lab2" x="480" y="230" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="32" font-weight="700" fill="#e6cf98">do osso</text>
+      <path id="o-arrow" d="M480 312 V372 M458 352 L480 376 L502 352" fill="none" stroke="#c8a55a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+      <text x="480" y="590" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="34" font-weight="700" fill="#543323">Osso da mandíbula</text>
+    </svg>
+
+    <h2 id="o-title" class="clip" data-start="0" data-duration="4.2">O osso começa<br /><em>a encolher.</em></h2>
+    <p id="o-sub" class="clip" data-start="0" data-duration="4.2">Os dentes vizinhos se movem e a mordida muda.</p>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#o-pill", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 0);
+    tl.fromTo("#o-svg", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power1.out" }, 0);
+    tl.fromTo("#o-title", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.15);
+    tl.fromTo("#o-lab,#o-lab2,#o-orig", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 0.3);
+    // o osso perde altura e os vizinhos se inclinam para o espaço vazio
+    tl.to("#o-ridge", { attr: { y: 400, height: 40 }, duration: 1.8, ease: "power2.inOut" }, 0.6);
+    tl.to("#o-cap", { attr: { y: 382 }, duration: 1.8, ease: "power2.inOut" }, 0.6);
+    tl.fromTo("#o-t1", { rotation: 0, svgOrigin: "190 480" }, { rotation: 7, svgOrigin: "190 480", duration: 2, ease: "power2.inOut" }, 0.7);
+    tl.fromTo("#o-t2", { rotation: 0, svgOrigin: "770 480" }, { rotation: -7, svgOrigin: "770 480", duration: 2, ease: "power2.inOut" }, 0.7);
+    tl.fromTo("#o-arrow", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 1.6);
+    tl.fromTo("#o-sub", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 1.4);
+    tl.fromTo("#o-l1,#o-l2,#o-l3,#o-l4", { strokeDashoffset: 0 }, { strokeDashoffset: -260, duration: 4.2, ease: "none" }, 0);
+    window.__timelines["osso"] = tl;
+  </script>
+</template>

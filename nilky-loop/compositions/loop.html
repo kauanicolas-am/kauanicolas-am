@@ -1,0 +1,212 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;overflow:hidden;background:#FFEE3A;font-family:"Inter",sans-serif;color:#0C0C6E}
+    #root .abs{position:absolute}
+    #root .bgsvg{position:absolute;left:0;top:0;width:1080px;height:1920px}
+    #root .rays{position:absolute;left:-700px;top:-560px;width:2480px;height:2480px;background:repeating-conic-gradient(rgba(255,255,255,.34) 0 7deg,rgba(255,255,255,0) 7deg 14deg)}
+    #root .ht{position:absolute;background-image:radial-gradient(#0C0C6E 2.4px,transparent 3px);background-size:17px 17px;opacity:.2}
+    #root .topbar{position:absolute;left:0;top:0;width:1080px;height:18px;display:flex}
+    #root .topbar i{flex:1}
+    #root #mega{position:absolute;left:-36px;top:196px;width:330px;height:290px}
+    #root #title{position:absolute;left:268px;top:218px;font-weight:900;text-transform:uppercase;letter-spacing:-.045em;line-height:.95;text-shadow:5px 5px 0 #fff;color:#0C0C6E}
+    #root #title .l1{font-size:92px;display:block}
+    #root #title .l2{font-size:96px;display:block;margin-left:-4px;margin-top:8px}
+    #root #people{position:absolute;left:14px;top:890px;width:484px;height:765px;filter:drop-shadow(0 16px 18px rgba(12,12,110,.32));-webkit-mask-image:linear-gradient(to bottom,#000 86%,transparent 100%);mask-image:linear-gradient(to bottom,#000 86%,transparent 100%)}
+
+    #root #dt{position:absolute;left:528px;top:930px;width:534px;height:238px;background:linear-gradient(180deg,#1A1A96,#0C0C6E);border-radius:30px;box-shadow:8px 8px 0 #fff;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}
+    #root #dt .s{font-weight:900;font-size:46px;color:#fff;line-height:1;letter-spacing:.02em}
+    #root #dt .d{font-weight:900;font-size:124px;color:#FFEB00;line-height:1;letter-spacing:-.05em}
+    #root #dt .h{font-weight:800;font-size:50px;color:#FFEB00;line-height:1}
+    #root #lc{position:absolute;left:528px;top:1184px;width:534px;height:214px;background:linear-gradient(180deg,#2E86FF,#0A47D6);border:6px solid #0C0C6E;border-radius:30px;box-shadow:8px 8px 0 #0C0C6E;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+    #root #lc .a{font-weight:900;font-size:42px;line-height:1.04;letter-spacing:-.03em;text-transform:uppercase}
+    #root #lc .b{font-weight:700;font-size:31px;margin-top:6px}
+    #root #lc .c{margin-top:8px;background:linear-gradient(180deg,#FFF35A,#FFD200);color:#0C0C6E;font-weight:900;font-size:29px;letter-spacing:.01em;padding:4px 20px 6px;border-radius:999px;text-transform:uppercase;white-space:nowrap}
+    #root #pm{position:absolute;left:528px;top:1414px;width:534px;height:96px;background:linear-gradient(180deg,#FF3DB4,#D10C86);border:5px solid #fff;border-radius:48px;box-shadow:0 6px 0 #0C0C6E;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-weight:900;font-size:33px;line-height:1.08;letter-spacing:-.02em;color:#fff;text-shadow:2px 2px 0 #0C0C6E}
+    #root #pm b{color:#FFEB00;font-weight:900}
+    #root #lg{position:absolute;left:528px;top:1524px;width:534px;height:116px;background:#fff;border:5px solid #0C0C6E;border-radius:24px;display:flex;align-items:center;justify-content:center;box-shadow:6px 6px 0 rgba(12,12,110,.35)}
+    #root #lg img{width:500px;display:block}
+    #root .shine{position:absolute;left:0;top:-40px;width:110px;height:420px;background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.75),rgba(255,255,255,0))}
+
+    #root #ex{position:absolute;left:70px;top:470px;width:940px;height:450px;z-index:10}
+    #root #ex>svg{position:absolute;left:0;top:0;width:940px;height:450px;overflow:visible}
+    #root #ex .clipb{position:absolute;left:0;top:0;width:940px;height:330px;border-radius:70px;overflow:hidden}
+    #root #ex .l1{position:absolute;left:54px;top:18px;font-weight:900;font-size:96px;letter-spacing:-.04em;line-height:1;white-space:nowrap}
+    #root #ex .l2{position:absolute;left:54px;top:122px;font-weight:900;font-size:176px;letter-spacing:-.05em;line-height:1;white-space:nowrap}
+    #root #ex .l2 em{font-style:normal;color:#BE0A76;display:inline-block}
+    #root #pr{position:absolute;left:400px;top:410px;width:640px;height:500px;z-index:9}
+    #root #pr>svg{position:absolute;left:0;top:0;width:640px;height:500px;overflow:visible}
+    #root #pr .t{position:absolute;left:0;top:0;width:640px;height:500px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+    #root #pr .a{font-weight:900;font-size:116px;line-height:1;letter-spacing:-.04em}
+    #root #pr .b{font-weight:800;font-size:64px;line-height:1.05}
+    #root #pr .c{font-weight:900;font-size:94px;line-height:1;letter-spacing:-.05em;color:#FF2236;margin-top:6px;white-space:nowrap;display:inline-block}
+    #root #pr .sw{width:400px;height:22px;margin-top:6px}
+    #root .ring{position:absolute;left:420px;top:350px;width:600px;height:600px;border-radius:50%;border:12px solid #fff;box-shadow:0 0 0 6px #0C0C6E;opacity:0;z-index:8}
+    #root .spark{position:absolute;width:48px;height:48px;opacity:0;z-index:12}
+  </style>
+
+  <div id="root" data-composition-id="loop" data-width="1080" data-height="1920">
+    <svg class="bgsvg" viewBox="0 0 1080 1920" aria-hidden="true">
+      <defs>
+        <pattern id="lp-gl" width="560" height="500" patternUnits="userSpaceOnUse"><g fill="none" stroke="#FFCF00" stroke-width="22" stroke-linejoin="round" stroke-linecap="round">
+          <g transform="translate(40 60) rotate(-10 130 60)"><circle cx="70" cy="62" r="64"/><circle cx="230" cy="62" r="64"/><path d="M134 54q16-14 32 0"/></g>
+          <g transform="translate(300 250) rotate(8 120 50)"><path d="M0 20q60-30 110 0v50q-20 36-60 34t-50-40z"/><path d="M150 20q50-30 110 0v50q-10 36-50 40t-60-34z"/><path d="M110 40q20-14 40 0"/></g>
+          <g transform="translate(20 330) rotate(6 120 50)"><rect x="0" y="0" width="120" height="86" rx="34"/><rect x="150" y="0" width="120" height="86" rx="34"/><path d="M120 34q15-14 30 0"/></g>
+          <g transform="translate(360 30) rotate(14 80 40)"><path d="M0 10q40-24 90 0 6 60-40 66T0 10z"/></g></g></pattern>
+      </defs>
+      <rect width="1080" height="1920" fill="#FFEE3A"/><rect width="1080" height="1920" fill="url(#lp-gl)"/>
+    </svg>
+    <div class="rays" id="rays" data-layout-allow-overflow></div>
+    <div class="ht" data-layout-allow-overflow style="left:-20px;top:900px;width:300px;height:420px;-webkit-mask-image:radial-gradient(circle at 0 50%,#000,transparent 70%);mask-image:radial-gradient(circle at 0 50%,#000,transparent 70%)"></div>
+    <div class="topbar"><i style="background:#FF2236"></i><i style="background:#FF8A00"></i><i style="background:#FFEB00"></i><i style="background:#5FD300"></i><i style="background:#12CFEA"></i><i style="background:#1268F5"></i><i style="background:#8A2BE2"></i><i style="background:#F4189E"></i></div>
+
+    <svg id="mega" data-layout-allow-overflow class="clip" data-start="0" data-duration="12" viewBox="0 0 330 290" aria-hidden="true">
+      <defs><pattern id="lp-dots" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="2.2" fill="#0C0C6E" opacity=".45"/></pattern></defs>
+      <polygon points="80,110 238,40 238,190 80,150" fill="#fff" stroke="#0C0C6E" stroke-width="8" stroke-linejoin="round"/>
+      <polygon points="80,130 238,115 238,190 80,150" fill="url(#lp-dots)"/>
+      <rect x="44" y="104" width="44" height="52" rx="10" fill="#F4189E" stroke="#0C0C6E" stroke-width="8"/>
+      <ellipse cx="238" cy="115" rx="30" ry="78" fill="#2A2A8A" stroke="#0C0C6E" stroke-width="8"/>
+      <ellipse cx="236" cy="115" rx="16" ry="52" fill="#F4189E"/>
+      <rect x="112" y="148" width="42" height="66" rx="12" fill="#0C0C6E" transform="rotate(-8 133 180)"/>
+      <polygon id="lp-b1" points="270,48 304,14 296,56 326,46 282,104 292,70" fill="#F4189E" stroke="#0C0C6E" stroke-width="5" stroke-linejoin="round"/>
+      <polygon id="lp-b2" points="274,150 312,150 292,170 322,186 276,196 294,172" fill="#12CFEA" stroke="#0C0C6E" stroke-width="5" stroke-linejoin="round"/>
+    </svg>
+    <h1 id="title" class="clip" data-start="0" data-duration="12"><span class="l1">Ação</span><span class="l2">Comunitária</span></h1>
+
+    <img id="people" class="clip" data-start="0" data-duration="12" src="assets/pessoas-livres.png" alt="Três pessoas sorrindo usando óculos" />
+
+    <div id="dt" class="clip" data-start="0" data-duration="12"><div class="shine" data-layout-allow-overflow id="dtshine"></div><span class="s">SÁBADO</span><span class="d">28/11</span><span class="h">das 8h às 17h</span></div>
+    <div id="lc" class="clip" data-start="0" data-duration="12"><span class="a">Escola Municipal<br>Roxana Bonessi</span><span class="b">Ao lado do Mercado Municipal</span><span class="c">Presidente Figueiredo</span></div>
+    <div id="pm" class="clip" data-start="0" data-duration="12"><span>E AINDA PROMOÇÕES</span><b>EXCLUSIVAS!!!</b></div>
+    <div id="lg" class="clip" data-start="0" data-duration="12"><img src="assets/logos-completa.png" alt="Ótica Nilky, Zeiss, Transitions, Varilux e Bluecut" /></div>
+
+    <div class="ring" id="ring1"></div><div class="ring" id="ring2"></div><div class="ring" id="ring3"></div>
+
+    <div id="pr" class="clip" data-start="0" data-duration="12">
+      <svg viewBox="0 0 640 500"><defs><pattern id="lp-dn" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="2.6" fill="#0C0C6E"/></pattern><radialGradient id="lp-mk" cx="100%" cy="100%" r="70%"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#000"/></radialGradient><mask id="lp-mm"><rect width="640" height="500" fill="url(#lp-mk)"/></mask></defs>
+        <polygon points="351.9,16.3 387.1,57.1 444.1,35.3 461.2,82.5 524.1,75.4 521.5,124.3 584.1,132.5 562.0,178.4 618.3,201.1 578.9,239.5 623.3,274.6 570.4,301.7 598.6,345.6 537.4,358.8 546.7,407.2 483.2,405.2 472.5,453.5 412.9,436.5 383.4,479.9 333.6,449.5 288.1,483.7 252.9,442.9 195.9,464.7 178.8,417.5 115.9,424.6 118.5,375.7 55.9,367.5 78.0,321.6 21.7,298.9 61.1,260.5 16.7,225.4 69.6,198.3 41.4,154.4 102.6,141.2 93.3,92.8 156.8,94.8 167.5,46.5 227.1,63.5 256.6,20.1 306.4,50.5" fill="#0C0C6E" transform="translate(12 14)"/>
+        <polygon points="351.9,16.3 387.1,57.1 444.1,35.3 461.2,82.5 524.1,75.4 521.5,124.3 584.1,132.5 562.0,178.4 618.3,201.1 578.9,239.5 623.3,274.6 570.4,301.7 598.6,345.6 537.4,358.8 546.7,407.2 483.2,405.2 472.5,453.5 412.9,436.5 383.4,479.9 333.6,449.5 288.1,483.7 252.9,442.9 195.9,464.7 178.8,417.5 115.9,424.6 118.5,375.7 55.9,367.5 78.0,321.6 21.7,298.9 61.1,260.5 16.7,225.4 69.6,198.3 41.4,154.4 102.6,141.2 93.3,92.8 156.8,94.8 167.5,46.5 227.1,63.5 256.6,20.1 306.4,50.5" fill="#fff" stroke="#0C0C6E" stroke-width="9" stroke-linejoin="round"/>
+        <polygon points="351.9,16.3 387.1,57.1 444.1,35.3 461.2,82.5 524.1,75.4 521.5,124.3 584.1,132.5 562.0,178.4 618.3,201.1 578.9,239.5 623.3,274.6 570.4,301.7 598.6,345.6 537.4,358.8 546.7,407.2 483.2,405.2 472.5,453.5 412.9,436.5 383.4,479.9 333.6,449.5 288.1,483.7 252.9,442.9 195.9,464.7 178.8,417.5 115.9,424.6 118.5,375.7 55.9,367.5 78.0,321.6 21.7,298.9 61.1,260.5 16.7,225.4 69.6,198.3 41.4,154.4 102.6,141.2 93.3,92.8 156.8,94.8 167.5,46.5 227.1,63.5 256.6,20.1 306.4,50.5" fill="url(#lp-dn)" mask="url(#lp-mm)" opacity=".35"/></svg>
+      <div class="t"><span class="a">Óculos</span><span class="b">a partir de</span><span class="c" id="prc">R$ 250,00</span>
+        <svg class="sw" viewBox="0 0 400 22"><path id="prsw" d="M6 14Q200 -2 394 12" fill="none" stroke="#F4189E" stroke-width="10" stroke-linecap="round" stroke-dasharray="400" stroke-dashoffset="0"/></svg></div>
+    </div>
+
+    <div id="ex" class="clip" data-start="0" data-duration="12">
+      <svg viewBox="0 0 940 450"><defs><linearGradient id="lp-by" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF04A"/><stop offset="1" stop-color="#FFB400"/></linearGradient></defs>
+        <path d="M70 0H870Q940 0 940 70V260Q940 330 870 330H345L262 442L215 330H70Q0 330 0 260V70Q0 0 70 0Z" fill="#0C0C6E" transform="translate(12 14)"/>
+        <path d="M70 0H870Q940 0 940 70V260Q940 330 870 330H345L262 442L215 330H70Q0 330 0 260V70Q0 0 70 0Z" fill="none" stroke="#fff" stroke-width="32" stroke-linejoin="round"/>
+        <path d="M70 0H870Q940 0 940 70V260Q940 330 870 330H345L262 442L215 330H70Q0 330 0 260V70Q0 0 70 0Z" fill="url(#lp-by)" stroke="#0C0C6E" stroke-width="11" stroke-linejoin="round"/>
+        <path d="M54 300Q420 268 886 290" fill="none" stroke="#F4189E" stroke-width="12" stroke-linecap="round"/></svg>
+      <div class="clipb"><div class="shine" data-layout-allow-overflow id="exshine"></div></div>
+      <div class="l1">Exame de vista</div><div class="l2">grátis<em id="exem">!!!</em></div>
+    </div>
+
+    <svg id="a1" class="spark" style="left:56px;top:446px" viewBox="-24 -24 48 48"><path d="M0 -22L5 -5L22 0L5 5L0 22L-5 5L-22 0L-5 -5Z" fill="#fff" stroke="#FF8A00" stroke-width="3" stroke-linejoin="round"/></svg>
+<svg id="a2" class="spark" style="left:976px;top:496px" viewBox="-24 -24 48 48"><path d="M0 -22L5 -5L22 0L5 5L0 22L-5 5L-22 0L-5 -5Z" fill="#fff" stroke="#FF8A00" stroke-width="3" stroke-linejoin="round"/></svg>
+<svg id="a3" class="spark" style="left:496px;top:401px" viewBox="-24 -24 48 48"><path d="M0 -22L5 -5L22 0L5 5L0 22L-5 5L-22 0L-5 -5Z" fill="#fff" stroke="#FF8A00" stroke-width="3" stroke-linejoin="round"/></svg>
+<svg id="a4" class="spark" style="left:906px;top:836px" viewBox="-24 -24 48 48"><path d="M0 -22L5 -5L22 0L5 5L0 22L-5 5L-22 0L-5 -5Z" fill="#fff" stroke="#FF8A00" stroke-width="3" stroke-linejoin="round"/></svg>
+<svg id="b1" class="spark" style="left:416px;top:406px" viewBox="-24 -24 48 48"><path d="M0 -22L5 -5L22 0L5 5L0 22L-5 5L-22 0L-5 -5Z" fill="#fff" stroke="#FF8A00" stroke-width="3" stroke-linejoin="round"/></svg>
+<svg id="b2" class="spark" style="left:991px;top:536px" viewBox="-24 -24 48 48"><path d="M0 -22L5 -5L22 0L5 5L0 22L-5 5L-22 0L-5 -5Z" fill="#fff" stroke="#FF8A00" stroke-width="3" stroke-linejoin="round"/></svg>
+<svg id="b3" class="spark" style="left:806px;top:901px" viewBox="-24 -24 48 48"><path d="M0 -22L5 -5L22 0L5 5L0 22L-5 5L-22 0L-5 -5Z" fill="#fff" stroke="#FF8A00" stroke-width="3" stroke-linejoin="round"/></svg>
+<svg id="b4" class="spark" style="left:996px;top:846px" viewBox="-24 -24 48 48"><path d="M0 -22L5 -5L22 0L5 5L0 22L-5 5L-22 0L-5 -5Z" fill="#fff" stroke="#FF8A00" stroke-width="3" stroke-linejoin="round"/></svg>
+<svg id="c1" class="spark" style="left:276px;top:446px" viewBox="-24 -24 48 48"><path d="M0 -22L5 -5L22 0L5 5L0 22L-5 5L-22 0L-5 -5Z" fill="#fff" stroke="#FF8A00" stroke-width="3" stroke-linejoin="round"/></svg>
+<svg id="c2" class="spark" style="left:1006px;top:446px" viewBox="-24 -24 48 48"><path d="M0 -22L5 -5L22 0L5 5L0 22L-5 5L-22 0L-5 -5Z" fill="#fff" stroke="#FF8A00" stroke-width="3" stroke-linejoin="round"/></svg>
+<svg id="c3" class="spark" style="left:536px;top:856px" viewBox="-24 -24 48 48"><path d="M0 -22L5 -5L22 0L5 5L0 22L-5 5L-22 0L-5 -5Z" fill="#fff" stroke="#FF8A00" stroke-width="3" stroke-linejoin="round"/></svg>
+<svg id="c4" class="spark" style="left:36px;top:806px" viewBox="-24 -24 48 48"><path d="M0 -22L5 -5L22 0L5 5L0 22L-5 5L-22 0L-5 -5Z" fill="#fff" stroke="#FF8A00" stroke-width="3" stroke-linejoin="round"/></svg>
+
+  </div>
+
+  <script>
+    gsap.set("#ex",{rotation:-5,scale:1,x:0,y:0,opacity:1,transformOrigin:"50% 55%"});
+    gsap.set("#pr",{rotation:-12,scale:.3,x:0,y:0,opacity:0,transformOrigin:"50% 50%"});
+    gsap.set("#mega",{rotation:-14,transformOrigin:"50% 60%"});
+    gsap.set("#people",{transformOrigin:"50% 100%"});
+    gsap.set("#rays",{transformOrigin:"50% 50%"});
+    gsap.set(".shine",{rotation:16,x:-200});
+
+    const tl = gsap.timeline({ paused: true });
+    const F=(t,a,b,p)=>tl.fromTo(t,a,Object.assign({},b,{immediateRender:false}),p);
+    const E="#ex", P="#pr";
+
+    // fundo girando uma volta completa: o último quadro é igual ao primeiro
+    F("#rays",{rotation:0},{rotation:360,duration:12,ease:"none"},0);
+
+    // pessoas respirando (4 ciclos de 3 s)
+    for(let i=0;i<4;i++){
+      F("#people",{y:0,rotation:0},{y:-10,rotation:.6,duration:1.5,ease:"sine.inOut"},3*i);
+      F("#people",{y:-10,rotation:.6},{y:0,rotation:0,duration:1.5,ease:"sine.inOut"},3*i+1.5);
+    }
+    // megafone balançando e faíscas do megafone
+    for(let i=0;i<8;i++){
+      F("#mega",{rotation:-14},{rotation:-9,duration:.35,ease:"power2.out"},.2+1.5*i);
+      F("#mega",{rotation:-9},{rotation:-14,duration:.5,ease:"power2.inOut"},.55+1.5*i);
+    }
+
+    // A: EXAME GRÁTIS em destaque (0 a 3,6 s). O quadro 0 já é o estado de repouso.
+    for(let i=0;i<4;i++){
+      const s=.35+.9*i;
+      F(E,{scale:1,rotation:-5},{scale:1.05,rotation:-3.5,duration:.3,ease:"power2.out"},s);
+      F(E,{scale:1.05,rotation:-3.5},{scale:1,rotation:-5,duration:.3,ease:"power2.in"},s+.3);
+      F("#exem",{scale:1,rotation:0},{scale:1.3,rotation:-8,duration:.25,ease:"back.out(2)"},s);
+      F("#exem",{scale:1.3,rotation:-8},{scale:1,rotation:0,duration:.35,ease:"power2.inOut"},s+.25);
+    }
+    F("#exshine",{x:-200},{x:1100,duration:.9,ease:"power1.inOut"},.7);
+    F("#exshine",{x:-200},{x:1100,duration:.9,ease:"power1.inOut"},2.5);
+    F(E,{scale:1,y:0,rotation:-5},{scale:.35,y:-80,rotation:-14,duration:.4,ease:"power2.in"},3.6);
+    F(E,{opacity:1},{opacity:0,duration:.18,ease:"none"},3.82);
+
+    // B: ÓCULOS A PARTIR DE R$ 250,00 em destaque (3,9 a 7,4 s)
+    F(P,{scale:.3,opacity:0,rotation:-14},{scale:1.12,opacity:1,rotation:4,duration:.5,ease:"back.out(1.6)"},4.05);
+    F(P,{scale:1.12},{scale:1,duration:.3,ease:"power2.out"},4.55);
+    for(let i=0;i<3;i++){
+      const s=5.0+.9*i;
+      F(P,{scale:1},{scale:1.05,duration:.3,ease:"power2.out"},s);
+      F(P,{scale:1.05},{scale:1,duration:.3,ease:"power2.in"},s+.3);
+      F("#prc",{scale:1},{scale:1.12,duration:.25,ease:"back.out(2)"},s+.1);
+      F("#prc",{scale:1.12},{scale:1,duration:.35,ease:"power2.inOut"},s+.35);
+    }
+    F("#prsw",{strokeDashoffset:400},{strokeDashoffset:0,duration:.6,ease:"power2.out"},5.0);
+    F("#ring1",{scale:.6,opacity:.9},{scale:1.5,opacity:0,duration:.7,ease:"power1.out"},4.1);
+    F("#ring2",{scale:.6,opacity:.9},{scale:1.5,opacity:0,duration:.7,ease:"power1.out"},5.6);
+    F("#ring3",{scale:.6,opacity:.9},{scale:1.5,opacity:0,duration:.7,ease:"power1.out"},6.6);
+
+    // C: os dois juntos (7,4 a 11 s)
+    F(P,{x:0,y:0,scale:1,rotation:4},{x:80,y:-20,scale:.76,rotation:3,duration:.7,ease:"power2.inOut"},7.4);
+    F(E,{x:-230,y:-50,scale:.2,opacity:0,rotation:-14},{x:-230,y:-50,scale:.66,opacity:1,rotation:-5,duration:.5,ease:"back.out(1.7)"},7.6);
+    F(E,{scale:.66},{scale:.58,duration:.25,ease:"power2.out"},8.1);
+    for(let i=0;i<3;i++){
+      const s=8.5+.85*i;
+      F(E,{scale:.58},{scale:.63,duration:.3,ease:"power2.out"},s);
+      F(E,{scale:.63},{scale:.58,duration:.3,ease:"power2.in"},s+.3);
+      F(P,{scale:.76},{scale:.8,duration:.3,ease:"power2.out"},s+.15);
+      F(P,{scale:.8},{scale:.76,duration:.3,ease:"power2.in"},s+.45);
+    }
+    F("#exshine",{x:-200},{x:1100,duration:.9,ease:"power1.inOut"},9.0);
+    F("#dtshine",{x:-150},{x:700,duration:.9,ease:"power1.inOut"},9.0);
+    F("#dtshine",{x:-150},{x:700,duration:.9,ease:"power1.inOut"},1.2);
+    F("#dtshine",{x:-150},{x:700,duration:.9,ease:"power1.inOut"},5.0);
+    for(const s of [1.5,5.5,9.5]){
+      F("#pm",{scale:1},{scale:1.05,duration:.25,ease:"power2.out"},s);
+      F("#pm",{scale:1.05},{scale:1,duration:.3,ease:"power2.in"},s+.25);
+    }
+
+    // volta ao começo (11 a 12 s): o selo sai e o balão volta ao tamanho grande
+    F(P,{scale:.76,rotation:3},{scale:.3,rotation:12,duration:.55,ease:"power2.in"},11.0);
+    F(P,{opacity:1},{opacity:0,duration:.2,ease:"none"},11.35);
+    F(E,{x:-230,y:-50,scale:.58,rotation:-5},{x:0,y:0,scale:1,rotation:-5,duration:1.0,ease:"power2.inOut"},11.0);
+
+    F("#a1",{scale:0,rotation:0,opacity:1},{scale:1.25,rotation:90,duration:.28,ease:"power2.out"},0.5);F("#a1",{scale:1.25,rotation:90,opacity:1},{scale:0,rotation:180,opacity:0,duration:.27,ease:"power2.in"},0.78);
+F("#a2",{scale:0,rotation:0,opacity:1},{scale:1.25,rotation:90,duration:.28,ease:"power2.out"},1.2);F("#a2",{scale:1.25,rotation:90,opacity:1},{scale:0,rotation:180,opacity:0,duration:.27,ease:"power2.in"},1.48);
+F("#a3",{scale:0,rotation:0,opacity:1},{scale:1.25,rotation:90,duration:.28,ease:"power2.out"},2.0);F("#a3",{scale:1.25,rotation:90,opacity:1},{scale:0,rotation:180,opacity:0,duration:.27,ease:"power2.in"},2.2800000000000002);
+F("#a4",{scale:0,rotation:0,opacity:1},{scale:1.25,rotation:90,duration:.28,ease:"power2.out"},2.8);F("#a4",{scale:1.25,rotation:90,opacity:1},{scale:0,rotation:180,opacity:0,duration:.27,ease:"power2.in"},3.08);
+F("#b1",{scale:0,rotation:0,opacity:1},{scale:1.25,rotation:90,duration:.28,ease:"power2.out"},4.1);F("#b1",{scale:1.25,rotation:90,opacity:1},{scale:0,rotation:180,opacity:0,duration:.27,ease:"power2.in"},4.38);
+F("#b2",{scale:0,rotation:0,opacity:1},{scale:1.25,rotation:90,duration:.28,ease:"power2.out"},4.6);F("#b2",{scale:1.25,rotation:90,opacity:1},{scale:0,rotation:180,opacity:0,duration:.27,ease:"power2.in"},4.88);
+F("#b3",{scale:0,rotation:0,opacity:1},{scale:1.25,rotation:90,duration:.28,ease:"power2.out"},5.4);F("#b3",{scale:1.25,rotation:90,opacity:1},{scale:0,rotation:180,opacity:0,duration:.27,ease:"power2.in"},5.680000000000001);
+F("#b4",{scale:0,rotation:0,opacity:1},{scale:1.25,rotation:90,duration:.28,ease:"power2.out"},6.2);F("#b4",{scale:1.25,rotation:90,opacity:1},{scale:0,rotation:180,opacity:0,duration:.27,ease:"power2.in"},6.48);
+F("#c1",{scale:0,rotation:0,opacity:1},{scale:1.25,rotation:90,duration:.28,ease:"power2.out"},8.2);F("#c1",{scale:1.25,rotation:90,opacity:1},{scale:0,rotation:180,opacity:0,duration:.27,ease:"power2.in"},8.479999999999999);
+F("#c2",{scale:0,rotation:0,opacity:1},{scale:1.25,rotation:90,duration:.28,ease:"power2.out"},8.6);F("#c2",{scale:1.25,rotation:90,opacity:1},{scale:0,rotation:180,opacity:0,duration:.27,ease:"power2.in"},8.879999999999999);
+F("#c3",{scale:0,rotation:0,opacity:1},{scale:1.25,rotation:90,duration:.28,ease:"power2.out"},9.4);F("#c3",{scale:1.25,rotation:90,opacity:1},{scale:0,rotation:180,opacity:0,duration:.27,ease:"power2.in"},9.68);
+F("#c4",{scale:0,rotation:0,opacity:1},{scale:1.25,rotation:90,duration:.28,ease:"power2.out"},10.0);F("#c4",{scale:1.25,rotation:90,opacity:1},{scale:0,rotation:180,opacity:0,duration:.27,ease:"power2.in"},10.28);
+
+    window.__timelines["loop"] = tl;
+  </script>
+</template>
